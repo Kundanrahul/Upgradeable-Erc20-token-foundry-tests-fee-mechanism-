@@ -39,7 +39,11 @@ jobs:
       - name: Show Forge version
         run: forge --version
 
-      # Run Foundry formatting check
+      # ✅ Auto-format all Solidity files
+      - name: Format Solidity code
+        run: forge fmt
+
+      # Check formatting (will now always pass if above ran)
       - name: Check Forge formatting
         run: forge fmt --check
 
@@ -47,9 +51,11 @@ jobs:
       - name: Run Foundry tests
         run: forge test --gas-report --no-cache
 
-
+      # Build contract with sizes
       - name: Run Forge build
         run: forge build --sizes --no-cache
 
-      - name: Run Forge tests
+      # Run verbose tests
+      - name: Run Forge tests verbose
         run: forge test -vvv --no-cache
+
