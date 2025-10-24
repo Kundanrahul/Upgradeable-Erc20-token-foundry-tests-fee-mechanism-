@@ -13,7 +13,7 @@ env:
 
 jobs:
   check:
-    name: Foundry project
+    name: Upgradeable Token CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -21,14 +21,32 @@ jobs:
           persist-credentials: false
           submodules: recursive
 
+      # Install Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # Install NPM dependencies
+      - name: Install NPM dependencies
+        run: npm install
+
+      # Install Foundry
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
 
+      # Show Forge version
       - name: Show Forge version
         run: forge --version
 
-      - name: Run Forge fmt
+      # Run Foundry formatting check
+      - name: Check Forge formatting
         run: forge fmt --check
+
+      # Run Foundry tests
+      - name: Run Foundry tests
+        run: forge test --gas-report
+
 
       - name: Run Forge build
         run: forge build --sizes
