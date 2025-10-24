@@ -55,8 +55,6 @@ cd upgradeable-token
 npm install
 forge install
 
-## Running Tests & Script
-
 
 
 
