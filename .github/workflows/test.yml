@@ -45,11 +45,11 @@ jobs:
 
       # Run Foundry tests
       - name: Run Foundry tests
-        run: forge test --gas-report
+        run: forge test --gas-report --no-cache
 
 
       - name: Run Forge build
-        run: forge build --sizes
+        run: forge build --sizes --no-cache
 
       - name: Run Forge tests
-        run: forge test -vvv
+        run: forge test -vvv --no-cache
