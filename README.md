@@ -52,6 +52,6 @@ npm install
 forge install
 
 ## Running Tests & Script
-![Foundry Tests](screenshots/foundry_tests.png)
+![Foundry Tests](https://github.com/Kundanrahul/Upgradeable-Erc20-token-foundry-tests-fee-mechanism-/blob/main/screenshots/foundry_tests.png?raw=true)
 ![Interact Script](screenshots/interact_script.png)
 
