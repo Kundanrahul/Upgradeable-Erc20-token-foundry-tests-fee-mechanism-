@@ -43,9 +43,12 @@ This project demonstrates a professional-grade **upgradeable ERC20 token** imple
 
 ---
 
-## Interact script action and foundry tests
+## foundry tests
 ![Foundry Tests](https://github.com/Kundanrahul/Upgradeable-Erc20-token-foundry-tests-fee-mechanism-/blob/main/screenshots/foundry_tests.png?raw=true)
 
+---
+
+## Interact script
 ![Interact Script](https://github.com/Kundanrahul/Upgradeable-Erc20-token-foundry-tests-fee-mechanism-/blob/main/screenshots/interact_script.png?raw=true)
 ## Setup & Installation
 
